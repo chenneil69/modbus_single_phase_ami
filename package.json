@@ -1,0 +1,20 @@
+{
+  "name": "single_phase_ami",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsx AMI_Reader.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.18.0",
+  "dependencies": {
+    "modbus-serial": "^8.0.22",
+    "serialport": "^13.0.0",
+    "tsx": "^4.20.6"
+  }
+}
