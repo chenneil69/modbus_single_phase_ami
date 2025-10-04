@@ -7,8 +7,8 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model stand_pv_ami_2025_08 {
-  timestamp   DateTime @id(map: "stand_pv_ami_2025_08_pk") @db.Timestamptz(6)
+model single_phase_ami_2025_10 {
+  timestamp   DateTime @id(map: "single_phase_ami_2025_10_pk") @db.Timestamptz(6)
   Va          Float?   @db.Real
   Vb          Float?   @db.Real
   Vc          Float?   @db.Real
@@ -21,8 +21,8 @@ model stand_pv_ami_2025_08 {
   energy      Float?   @db.Real
 }
 
-model stand_pv_ami_2025_09 {
-  timestamp   DateTime @id(map: "stand_pv_ami_2025_09_pk") @db.Timestamptz(6)
+model single_phase_ami_2025_11 {
+  timestamp   DateTime @id(map: "single_phase_ami_2025_11_pk") @db.Timestamptz(6)
   Va          Float?   @db.Real
   Vb          Float?   @db.Real
   Vc          Float?   @db.Real
@@ -35,176 +35,8 @@ model stand_pv_ami_2025_09 {
   energy      Float?   @db.Real
 }
 
-model stand_pv_ami_2025_10 {
-  timestamp   DateTime @id(map: "stand_pv_ami_2025_10_pk") @db.Timestamptz(6)
-  Va          Float?   @db.Real
-  Vb          Float?   @db.Real
-  Vc          Float?   @db.Real
-  Ia          Float?   @db.Real
-  Ib          Float?   @db.Real
-  Ic          Float?   @db.Real
-  frequency   Float?   @db.Real
-  realPower   Float?   @db.Real
-  powerFactor Float?   @db.Real
-  energy      Float?   @db.Real
-}
-
-model stand_pv_ami_2025_11 {
-  timestamp   DateTime @id(map: "stand_pv_ami_2025_11_pk") @db.Timestamptz(6)
-  Va          Float?   @db.Real
-  Vb          Float?   @db.Real
-  Vc          Float?   @db.Real
-  Ia          Float?   @db.Real
-  Ib          Float?   @db.Real
-  Ic          Float?   @db.Real
-  frequency   Float?   @db.Real
-  realPower   Float?   @db.Real
-  powerFactor Float?   @db.Real
-  energy      Float?   @db.Real
-}
-
-model stand_pv_ami_2025_12 {
-  timestamp   DateTime @id(map: "stand_pv_ami_2025_12_pk") @db.Timestamptz(6)
-  Va          Float?   @db.Real
-  Vb          Float?   @db.Real
-  Vc          Float?   @db.Real
-  Ia          Float?   @db.Real
-  Ib          Float?   @db.Real
-  Ic          Float?   @db.Real
-  frequency   Float?   @db.Real
-  realPower   Float?   @db.Real
-  powerFactor Float?   @db.Real
-  energy      Float?   @db.Real
-}
-
-model stand_main_ami_2025_08 {
-  timestamp   DateTime @id(map: "stand_main_ami_2025_08_pk") @db.Timestamptz(6)
-  Va          Float?   @db.Real
-  Vb          Float?   @db.Real
-  Vc          Float?   @db.Real
-  Ia          Float?   @db.Real
-  Ib          Float?   @db.Real
-  Ic          Float?   @db.Real
-  frequency   Float?   @db.Real
-  realPower   Float?   @db.Real
-  powerFactor Float?   @db.Real
-  energy      Float?   @db.Real
-}
-
-model stand_main_ami_2025_09 {
-  timestamp   DateTime @id(map: "stand_main_ami_2025_09_pk") @db.Timestamptz(6)
-  Va          Float?   @db.Real
-  Vb          Float?   @db.Real
-  Vc          Float?   @db.Real
-  Ia          Float?   @db.Real
-  Ib          Float?   @db.Real
-  Ic          Float?   @db.Real
-  frequency   Float?   @db.Real
-  realPower   Float?   @db.Real
-  powerFactor Float?   @db.Real
-  energy      Float?   @db.Real
-}
-
-model stand_main_ami_2025_10 {
-  timestamp   DateTime @id(map: "stand_main_ami_2025_10_pk") @db.Timestamptz(6)
-  Va          Float?   @db.Real
-  Vb          Float?   @db.Real
-  Vc          Float?   @db.Real
-  Ia          Float?   @db.Real
-  Ib          Float?   @db.Real
-  Ic          Float?   @db.Real
-  frequency   Float?   @db.Real
-  realPower   Float?   @db.Real
-  powerFactor Float?   @db.Real
-  energy      Float?   @db.Real
-}
-
-model stand_main_ami_2025_11 {
-  timestamp   DateTime @id(map: "stand_main_ami_2025_11_pk") @db.Timestamptz(6)
-  Va          Float?   @db.Real
-  Vb          Float?   @db.Real
-  Vc          Float?   @db.Real
-  Ia          Float?   @db.Real
-  Ib          Float?   @db.Real
-  Ic          Float?   @db.Real
-  frequency   Float?   @db.Real
-  realPower   Float?   @db.Real
-  powerFactor Float?   @db.Real
-  energy      Float?   @db.Real
-}
-
-model stand_main_ami_2025_12 {
-  timestamp   DateTime @id(map: "stand_main_ami_2025_12_pk") @db.Timestamptz(6)
-  Va          Float?   @db.Real
-  Vb          Float?   @db.Real
-  Vc          Float?   @db.Real
-  Ia          Float?   @db.Real
-  Ib          Float?   @db.Real
-  Ic          Float?   @db.Real
-  frequency   Float?   @db.Real
-  realPower   Float?   @db.Real
-  powerFactor Float?   @db.Real
-  energy      Float?   @db.Real
-}
-
-model stand_branch_2_ami_2025_08 {
-  timestamp   DateTime @id(map: "stand_branch_2_ami_2025_08_pk") @db.Timestamptz(6)
-  Va          Float?   @db.Real
-  Vb          Float?   @db.Real
-  Vc          Float?   @db.Real
-  Ia          Float?   @db.Real
-  Ib          Float?   @db.Real
-  Ic          Float?   @db.Real
-  frequency   Float?   @db.Real
-  realPower   Float?   @db.Real
-  powerFactor Float?   @db.Real
-  energy      Float?   @db.Real
-}
-
-model stand_branch_2_ami_2025_09 {
-  timestamp   DateTime @id(map: "stand_branch_2_ami_2025_09_pk") @db.Timestamptz(6)
-  Va          Float?   @db.Real
-  Vb          Float?   @db.Real
-  Vc          Float?   @db.Real
-  Ia          Float?   @db.Real
-  Ib          Float?   @db.Real
-  Ic          Float?   @db.Real
-  frequency   Float?   @db.Real
-  realPower   Float?   @db.Real
-  powerFactor Float?   @db.Real
-  energy      Float?   @db.Real
-}
-
-model stand_branch_2_ami_2025_10 {
-  timestamp   DateTime @id(map: "stand_branch_2_ami_2025_10_pk") @db.Timestamptz(6)
-  Va          Float?   @db.Real
-  Vb          Float?   @db.Real
-  Vc          Float?   @db.Real
-  Ia          Float?   @db.Real
-  Ib          Float?   @db.Real
-  Ic          Float?   @db.Real
-  frequency   Float?   @db.Real
-  realPower   Float?   @db.Real
-  powerFactor Float?   @db.Real
-  energy      Float?   @db.Real
-}
-
-model stand_branch_2_ami_2025_11 {
-  timestamp   DateTime @id(map: "stand_branch_2_ami_2025_11_pk") @db.Timestamptz(6)
-  Va          Float?   @db.Real
-  Vb          Float?   @db.Real
-  Vc          Float?   @db.Real
-  Ia          Float?   @db.Real
-  Ib          Float?   @db.Real
-  Ic          Float?   @db.Real
-  frequency   Float?   @db.Real
-  realPower   Float?   @db.Real
-  powerFactor Float?   @db.Real
-  energy      Float?   @db.Real
-}
-
-model stand_branch_2_ami_2025_12 {
-  timestamp   DateTime @id(map: "stand_branch_2_ami_2025_12_pk") @db.Timestamptz(6)
+model single_phase_ami_2025_12 {
+  timestamp   DateTime @id(map: "single_phase_ami_2025_12_pk") @db.Timestamptz(6)
   Va          Float?   @db.Real
   Vb          Float?   @db.Real
   Vc          Float?   @db.Real
