@@ -1,20 +1,35 @@
 {
-  "name": "single_phase_ami",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "tsx AMI_Reader.ts"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "packageManager": "pnpm@10.18.0",
-  "dependencies": {
-    "modbus-serial": "^8.0.22",
-    "serialport": "^13.0.0",
-    "tsx": "^4.20.6"
-  }
+    "name": "read_modbus_single_phase",
+    "version": "1.0.0",
+    "description": "",
+    "type": "module",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "tsx read_modbus_single_phase.ts"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@prisma/client": "^6.13.0",
+        "dayjs": "^1.11.13",
+        "modbus-serial": "^8.0.18",
+        "mqtt": "^5.10.3"
+    },
+    "devDependencies": {
+        "@types/node": "^24.6.2",
+        "prisma": "^6.13.0",
+        "ts-node": "^10.9.2",
+        "tsx": "^4.19.3"
+    },
+    "pnpm": {
+        "ignoredBuiltDependencies": [
+            "prisma"
+        ],
+        "onlyBuiltDependencies": [
+            "@prisma/client",
+            "@prisma/engines"
+        ]
+    }
 }
