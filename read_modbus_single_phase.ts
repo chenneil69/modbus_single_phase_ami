@@ -99,9 +99,9 @@ async function readModbusData(): Promise<void> {
 
 		const ami = {
 			// timeStamp: amiDateTime,
-			Va: getFloat((await client.readHoldingRegisters(0x0108, 2)).buffer), // 4 byte float: 0.0 ~ 1200000.0 V
-			Vb: getFloat((await client.readHoldingRegisters(0x010a, 2)).buffer), // 4 byte float: 0.0 ~ 1200000.0 V
-			Vc: getFloat((await client.readHoldingRegisters(0x010c, 2)).buffer), // 4 byte float: 0.0 ~ 1200000.0 V
+			Va: getFloat((await client.readHoldingRegisters(0x0100, 2)).buffer), // 4 byte float: 0.0 ~ 1200000.0 V
+			Vb: getFloat((await client.readHoldingRegisters(0x0102, 2)).buffer), // 4 byte float: 0.0 ~ 1200000.0 V
+			Vc: getFloat((await client.readHoldingRegisters(0x0104, 2)).buffer), // 4 byte float: 0.0 ~ 1200000.0 V
 			Ia: getFloat((await client.readHoldingRegisters(0x0120, 2)).buffer), // 4 byte float: 0.000~9999.000 A
 			Ib: getFloat((await client.readHoldingRegisters(0x0122, 2)).buffer), // 4 byte float: 0.000~9999.000 A
 			Ic: getFloat((await client.readHoldingRegisters(0x0124, 2)).buffer), // 4 byte float: 0.000~9999.000 A
@@ -114,10 +114,10 @@ async function readModbusData(): Promise<void> {
 		console.log('/dev/ttyUSB0 AMI Readings:', ami);
 
 		// 如果要查 DPM DA530 的 modbus 設定
-		console.log('AMIInfo:', await getAMIInfo(client));
+		// console.log('AMIInfo:', await getAMIInfo(client));
 
 		// [TODO] 暫時不寫入資料庫
-		// await insertAmi(0, ami);
+		await insertAmi(0, ami);
 	} catch (error) {
 		console.error('/dev/ttyUSB0 Error reading Modbus data:', error);
 		// client.close();

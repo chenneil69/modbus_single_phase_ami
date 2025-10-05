@@ -27,3 +27,11 @@ use `pgcli` to check data in db
 ### DPM DA530 [查閱 5.2](./Documentation/DELTA_IA-OMS_DPM-DA530-510_UM_TC_20201023.pdf)
 
 電錶 modbus registers 以 [查閱 5.2](./Documentation/DELTA_IA-OMS_DPM-DA530-510_UM_TC_20201023.pdf) 為準
+
+Use pgcli to access timescaledb
+
+Google pgcli for manual
+
+```shell
+$ pgcli postgres://timescaledb:timescaledb01@127.0.0.1:5434/timescaledb
+```
